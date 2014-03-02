@@ -1,0 +1,8 @@
+node_modules
+package.yml
+test
+archive
+tmp
+nohup.out
+logs
+dump
