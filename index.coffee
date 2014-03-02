@@ -1,6 +1,7 @@
 jade = require 'jade'
 passport = require 'passport'
 fs = require 'fs'
+path = require 'path'
 
 # requires express.session (for Oauth 1) and express.cookieParser
 
