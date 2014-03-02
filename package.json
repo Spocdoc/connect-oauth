@@ -1,6 +1,6 @@
 {
   "name": "connect_oauth",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ERROR: No README.md file found!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,10 @@
   "private": true,
   "dependencies": {
     "passport": "0.x",
-    "jade": "1.x"
+    "jade": "1.x",
+    "passport-evernote": "0.x",
+    "passport-twitter": "1.x",
+    "passport-github": "0.x",
+    "passport-linkedin-oauth2": "1.x"
   }
 }
