@@ -1,15 +1,12 @@
 passport = require 'passport'
 
-Strategy = require("passport-evernote").Strategy
-CONSUMER_KEY = "mikerobe89"
-CONSUMER_SECRET = "e473f9f726283f9f"
-service = "evernote"
+Strategy = require("passport-twitter").Strategy
+CONSUMER_KEY = "wpeHXSNTLF8j1cCLvjgQ3g"
+CONSUMER_SECRET = "6n2FEfUUasGyf1HCI9hAs5i13CrJnju80CRleYl0E"
+service = "twitter"
 
 module.exports = (app, options) ->
   passport.use new Strategy
-    # requestTokenURL: "https://sandbox.evernote.com/oauth"
-    # accessTokenURL: "https://sandbox.evernote.com/oauth"
-    # userAuthorizationURL: "https://sandbox.evernote.com/OAuth.action"
     consumerKey: CONSUMER_KEY
     consumerSecret: CONSUMER_SECRET
     callbackURL: options.urlPrefix + "/auth/#{service}/callback"
@@ -21,7 +18,6 @@ module.exports = (app, options) ->
         access: token
         secret: tokenSecret
         refresh: null
-        username: null
-        email: null
-        name: null
+        username: profile.username
+        name: profile.displayName
 

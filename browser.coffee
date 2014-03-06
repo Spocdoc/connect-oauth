@@ -8,8 +8,6 @@ checkOauthChild = ->
   return
 
 startOauth = (service, cb) ->
-  $pre.text $pre.text() + "\nstarting new oauth... "
-
   if oauthChild
     oauthChild.close()
     clearInterval oauthTimer
@@ -32,8 +30,13 @@ window['oauthFailed'] = ->
   cb? "EFAILED"
   return
 
-window['oauthSucceeded'] = (info) ->
+window['oauthSucceeded'] = (info_) ->
+  # build a local object inheriting from Object (otherwise it apparently doesn't)
+  info = {}
+  info[k] = v for k,v of info_
   cb = oauthCb
   stopOauth()
   cb? null, info
   return
+
+module.exports = {startOauth, stopOauth}
