@@ -1,6 +1,6 @@
 {
   "name": "connect_oauth",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "ERROR: No README.md file found!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
     "passport-github": "0.x",
     "passport-linkedin-oauth2": "1.x",
     "passport-tumblr": "0.x",
-    "passport-google-oauth": "0.x"
+    "passport-google-oauth": "0.x",
+    "passport-angellist": "0.x"
   }
 }
